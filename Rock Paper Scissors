@@ -1,0 +1,30 @@
+import random
+
+n = ['rock', 'paper', 'scissor']
+n1 = random.choice(n)
+guess = (input("Enter your choice: ")).lower()
+while n1 != guess:
+    guess = input("Rock, Paper, Scissors?").lower()
+    if guess == n1:
+        print("Its a tie !!!")
+    elif guess == "rock":
+        if n1 == "paper":
+            print("You lose!", n1, "covers", guess)
+        else:
+            print("You win!", guess, "smashes", n1)
+    elif guess == "paper":
+        if n1 == "scissors":
+            print("You lose!", n1, "cut", guess)
+        else:
+            print("You win!", guess, "covers", n1)
+    elif guess == "scissors":
+        if n1 == "rock":
+            print("You lose...", n1, "smashes", guess)
+        else:
+            print("You win!", guess, "cut", n1)
+    else:
+        print("That's not a valid play. Check your spelling!")
+
+
+
+
