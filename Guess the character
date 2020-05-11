@@ -1,0 +1,20 @@
+import random
+
+
+def GuessGame(guess):
+    words = ['apple', 'book', 'cat', 'dog', 'elephant', 'fennel', 'girl', 'high', 'ice-cream']
+    actual_word = random.choice(words)
+    count = 0
+    while count <= 3:
+        if guess == actual_word:
+            print('you win')
+            break
+        else:
+            guess = input('guess again:')
+        count +=1
+    if count > 3:
+        print('you lost !')
+
+
+guess = input('enter a your guess: ')
+GuessGame((guess).lower())
