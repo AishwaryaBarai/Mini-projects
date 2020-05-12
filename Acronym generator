@@ -1,0 +1,10 @@
+def AcronymGen(text):
+    text = text.split()
+    final_text = ""
+    for word in text:
+        final_text = final_text + (word[0])
+    print(final_text.upper())
+
+
+text = input('enter your text: ')
+AcronymGen(text)
